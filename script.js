@@ -1,12 +1,26 @@
-var square = document.getElementById('square');
+let square = document.getElementById('square');
+let words = document.getElementById('words');
 
 function changeColour(colour){
 
     square.background = colour;
 }
 
-square.addEventListener('click', (event) => changeColour('grey'));
+square.addEventListener('click', (event)=> clicked());
+square.addEventListener('mouseover', (event) => changeColour('grey'));
+square.addEventListener('mouseout', (event) => changeColour('red'));
 
+function greeting() {
+    //console log(Welcome to Flatland. I am Square)
+    words.innerHTML = "Welcome to Flatland. I am Square";
+}
+
+function clicked() {
+    let msg = "Build a<br>" + createBuzzwordPhrase();
+
+    words.innerHTML = msg;
+
+}
 
 function createBuzzwordPhrase() {
     /* See https://en.wikipedia.org/wiki/List_of_buzzwords */
