@@ -3,7 +3,7 @@ let words = document.getElementById('words');
 
 function changeColour(colour){
 
-    square.background = colour;
+    square.style.background = colour;
 }
 
 square.addEventListener('click', (event)=> clicked());
